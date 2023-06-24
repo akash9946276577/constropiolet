@@ -1,0 +1,25 @@
+{% extends 'theme.html' %}
+
+{% block content %}
+<h2> Materials </h2>
+<div class="container">
+    <div class="row">
+{%  for material in materials %}
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{material.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{material.name}}</h5>
+                    <p class="card-text">Quantity = {{material.quantity}}, Quality = {{material.quality}}</p>
+                    <a href="#" class="btn btn-primary">BUY {{material.price}}</a>
+                </div>
+            </div>
+        </div>
+
+
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
